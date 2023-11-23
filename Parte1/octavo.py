@@ -32,7 +32,22 @@ if num1 == num2 and num1 == num3:
    resultado = suma*num3
    print(resultado) """
 
-   
+
+""" x = int(input("Valor de x: "))
+y = int(input("valor de y: "))
+
+if x > 0 and y > 0:
+   print("Primer Cuadrante")
+elif x < 0 and y > 0:
+   print("Segundo Cuadrante")
+elif x < 0 and y < 0:
+   print("Tercer Cuadrante")
+elif x > 0 and y < 0:
+   print("Cuarto Cuadrante")
+else:
+   print(f"{x}== {y}") """
+
+
 
 
 
