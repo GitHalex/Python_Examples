@@ -24,7 +24,7 @@ while x <= n:
 
 print(f"{suma/n} promedio de estatura") """
 
-cantidad_empleados = int(input("Ingrese la cantidad de empleados: "))
+""" cantidad_empleados = int(input("Ingrese la cantidad de empleados: "))
 x = 1
 empleados_100_300 = 0
 empleados_mas_300 = 0
@@ -42,7 +42,43 @@ while x <= cantidad_empleados:
 
 print(f"{empleados_100_300} cantidad de empleados que reciben un sueldo de 100-300 ") 
 print(f" {empleados_mas_300} cantidad de empleados que reciben un sueldo mas de 300") 
-print(f"Dinero que se gasta en sueldos {sueldo_empresa} pelucholares")
+print(f"Dinero que se gasta en sueldos {sueldo_empresa} pelucholares") """
+
+
+""" x = 1
+contador = 0
+valor_once = 11
+while x <= 25:
+   print(valor_once*x)
+   contador += 1
+   x += 1
+
+print(contador) """
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
