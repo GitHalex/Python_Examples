@@ -56,6 +56,40 @@ while x <= 25:
 print(contador) """
 
 
+""" multiplos = 8
+while multiplos <= 500:
+   multiplos  += 8
+   print(multiplos)
+ """
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
 
 
 
