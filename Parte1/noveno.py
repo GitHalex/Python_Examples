@@ -62,6 +62,66 @@ while multiplos <= 500:
    print(multiplos)
  """
 
+""" suma1 = 0
+suma2 = 0
+x=1
+print("Carga de la primera lista")
+while x <= 15:
+   valor = int(input("Ingrese un valor"))
+   suma1 += valor
+   x += 1
+
+x= 1
+print("Carga de la segunda lista")
+while x <= 15:
+   valor = int(input("Ingrese un valor"))
+   suma2 += valor
+   x += 1
+
+if suma1 > suma2:
+   print("La lista 1 tiene un valor acumulado mayor")
+elif suma2 > suma1:
+    print("La lista 2 tiene un valor acumulado mayor")
+else:
+   print("Ambas listas tienen valores iguales") """
+
+
+x = 1
+n = int(input("Ingrese cantidad de numeros: "))
+pares = 0
+impares = 0
+while x <= n:
+   valor = int(input("Ingrese un numero: "))
+   if valor % 2 == 0:
+      pares +=1
+   else:
+      impares +=1
+   x+= 1
+
+print(f"En una cantidad de numeros: {n}")
+print(f"existe: {pares} numeros pares")
+print(f"existe: {impares} numeros impares")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
