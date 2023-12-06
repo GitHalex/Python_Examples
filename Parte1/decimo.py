@@ -97,3 +97,14 @@ print(f"promedio edad TARDE {suma_seis/6}")
 print(f"promedio edad NOCHE {suma_once/11}")
 
 print(F"promedio de los tres turnos {(suma_cinco+suma_seis+suma_once)/22}") """
+
+""" Confeccionar un programa que solicite la carga de102.
+valores reales por teclado, mostrar al final su suma """
+suma_reales = 0
+for i in range(10):
+    numero = float(input("Ingrese un numero: "))
+    # suma de reales
+    suma_reales += numero
+
+# total de la suma de numeros reales
+print(suma_reales)
