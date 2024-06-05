@@ -44,23 +44,23 @@ print(f"{empleados_100_300} cantidad de empleados que reciben un sueldo de 100-3
 print(f" {empleados_mas_300} cantidad de empleados que reciben un sueldo mas de 300") 
 print(f"Dinero que se gasta en sueldos {sueldo_empresa} pelucholares") """
 
-
-""" x = 1
+"""
+x = 1
 contador = 0
 valor_once = 11
 while x <= 25:
-   print(valor_once*x)
+   print(valor_once*x, end="-")
    contador += 1
    x += 1
 
-print(contador) """
+print(contador)"""
 
 
-""" multiplos = 8
+multiplos = 8
 while multiplos <= 500:
-   multiplos  += 8
-   print(multiplos)
- """
+    if multiplos % 8 == 0:
+      print(multiplos, end=" - ")
+    multiplos += 1
 
 """ suma1 = 0
 suma2 = 0
@@ -85,7 +85,7 @@ elif suma2 > suma1:
 else:
    print("Ambas listas tienen valores iguales") """
 
-
+"""
 x = 1
 n = int(input("Ingrese cantidad de numeros: "))
 pares = 0
@@ -100,7 +100,7 @@ while x <= n:
 
 print(f"En una cantidad de numeros: {n}")
 print(f"existe: {pares} numeros pares")
-print(f"existe: {impares} numeros impares")
+print(f"existe: {impares} numeros impares")"""
 
 
 
