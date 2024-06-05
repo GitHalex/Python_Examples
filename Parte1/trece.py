@@ -14,9 +14,9 @@ for i in frase_min:
         cant_vocales += 1
 print(f"cantidad de vocales: {cant_vocales}") """
 
-clave = input("Ingrese una clave: ")
+""" clave = input("Ingrese una clave: ")
 tam_clave = len(clave)
 if tam_clave >= 10 and tam_clave <= 20:
     print("Contraseña Correcta")
 else:
-    print("Error")
+    print("Error") """

@@ -29,7 +29,7 @@ if valor >= 1 and valor <= 10:
     for i in range(13):
         print(f"{valor} x {i} = {valor*i}")
 else:
-    print("ingresaste un numero menor a 1 o mayor a 10") """
+    print("ingresaste un numero menor a 1 o mayor a 10")  """
 
 
 """ n = int(input("Ingrese la cantidad de triangulos: "))
@@ -100,11 +100,12 @@ print(F"promedio de los tres turnos {(suma_cinco+suma_seis+suma_once)/22}") """
 
 """ Confeccionar un programa que solicite la carga de102.
 valores reales por teclado, mostrar al final su suma """
-suma_reales = 0
+
+""" suma_reales = 0
 for i in range(10):
     numero = float(input("Ingrese un numero: "))
     # suma de reales
-    suma_reales += numero
+    suma_reales += numero """
 
 # total de la suma de numeros reales
 print(suma_reales)

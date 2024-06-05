@@ -55,12 +55,12 @@ while x <= 25:
 
 print(contador)"""
 
-
+"""
 multiplos = 8
 while multiplos <= 500:
     if multiplos % 8 == 0:
       print(multiplos, end=" - ")
-    multiplos += 1
+    multiplos += 1 """
 
 """ suma1 = 0
 suma2 = 0
