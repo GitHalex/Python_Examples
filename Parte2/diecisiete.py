@@ -1,4 +1,4 @@
-frutas = []
+""" frutas = []
 precios = []
 for i in range(5):
   fruta = input("Ingrese una fruta: ")
@@ -10,4 +10,33 @@ primerPrecio = precios[0]
 print(f"Primer producto: {frutas[0]}  -->   Precio: {precios[0]}")
 for i in range(1, len(precios)):
   if precios[i] >= primerPrecio:
-    print(f"Producto: {frutas[i]} --> Precio: {precios[i]}")
+    print(f"Producto: {frutas[i]} --> Precio: {precios[i]}") """
+
+
+
+nombres = []
+notas = []
+for i in range(4):
+  nombre = input("Ingrese un nombre: ")
+  nombres.append(nombre)
+  nota = float(input("Ingrese una nota: "))
+  notas.append(nota)
+
+contarBuenos = 0
+condicion = []
+for i in range(len(notas)):
+  if notas[i] >= 8:
+    condicion.append("Muy Bueno")
+    contarBuenos += 1
+  elif notas[i] >= 4 and notas[i] < 8:
+    condicion.append("Bueno")
+  else:
+    condicion.append("Insuficiente")
+
+print(nombres)
+print(notas)
+print(condicion)
+
+print(f"Cantidad de alumos que son muy buenos: {contarBuenos}")
+
+  
