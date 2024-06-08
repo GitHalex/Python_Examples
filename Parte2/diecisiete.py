@@ -14,7 +14,7 @@ for i in range(1, len(precios)):
 
 
 
-nombres = []
+""" nombres = []
 notas = []
 for i in range(4):
   nombre = input("Ingrese un nombre: ")
@@ -37,6 +37,64 @@ print(nombres)
 print(notas)
 print(condicion)
 
-print(f"Cantidad de alumos que son muy buenos: {contarBuenos}")
+print(f"Cantidad de alumos que son muy buenos: {contarBuenos}") """
+
+primeraLista = [int(input("Ingrese un numero a la primera lista: ")) for _ in range(4)]
+segundaLista = [int(input("Ingrese un numero a la segunda lista: ")) for _ in range(4)]
+sumaLista = [primeraLista[i] + segundaLista[i] for i in range(len(primeraLista))]
+print(primeraLista)
+print(segundaLista)
+print(sumaLista)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
