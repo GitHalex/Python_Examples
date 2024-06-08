@@ -14,7 +14,12 @@ print(lista_orden_menor) """
 numeros = [int(input("Ingrese un número entero: ")) for _ in range(5)]
 
 # Encontrar el mayor valor en la lista
-mayor = max(numeros)
+# mayor = max(numeros)
+
+mayor = numeros[0]
+for numero in range(len(numeros)):
+    if numeros[numero] > mayor:
+        mayor = numeros[numero]
 
 # Contar cuántas veces se repite el mayor valor en la lista
 repeticiones = numeros.count(mayor)
