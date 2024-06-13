@@ -24,6 +24,7 @@ for i in range(cantidad_empleados):
 
 print(nombres_trabajadores)
 print(sueldos_trabajadores)
+print(f"Utilizando con el metodo sorted seria: {sorted(sueldos_trabajadores)}")
 
 for i in range(len(sueldos_trabajadores) - 1):
   for j in range(len(sueldos_trabajadores) - 1 -i):
