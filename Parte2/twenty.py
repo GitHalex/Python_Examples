@@ -17,3 +17,8 @@ for i in range(len(lista)):
       lista[i][j] = 0
 
 print(lista)
+
+
+listaAdd = [[int(input(f"Ingrese un numero para la lista [{i}, {j}]: ")) for j in range(3)] for i in range(3)]
+print(listaAdd)
+print(f"El ultimo elemento de la lista es {listaAdd[-1]}")
