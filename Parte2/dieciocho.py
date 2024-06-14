@@ -56,3 +56,4 @@ for i in range(len(my_list) -1):
             my_list[j], my_list[j + 1] = my_list[j + 1], my_list[j]
 
 print(f"Lista donde la esta de mayor a menor: {my_list}")
+
