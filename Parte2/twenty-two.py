@@ -1,4 +1,4 @@
-empleados = []
+""" empleados = []
 sueldos = []
 cantidad_empleados = int(input("Cantidad de empleados: "))
 for i in range(cantidad_empleados):
@@ -17,4 +17,13 @@ for j in sorted(indices_a_eliminar, reverse=True):
 
 print("Mostrar listas")
 for k in range(len(empleados)):
-    print(f"Empleado: {empleados[k]} y su sueldo: {sueldos[k]}")
+    print(f"Empleado: {empleados[k]} y su sueldo: {sueldos[k]}") """
+
+
+lista = [int(input("Ingrese un numero: ")) for _ in range(5)]
+print(lista)
+
+lista_nueva = [i for i in lista if i < 10]
+print(lista_nueva)
+
+
