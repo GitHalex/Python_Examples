@@ -36,7 +36,7 @@ print(paisMayor, temperaturaMayor) """
 
 
 # Definir las listas
-empleados = []
+""" empleados = []
 inasistencias = []
 
 # Solicitar los nombres de los empleados y sus días de inasistencia
@@ -64,4 +64,17 @@ empleados_menos_faltas = [empleados[i] for i in range(3) if cantidad_inasistenci
 
 print("\nEmpleado(s) que faltó(aron) menos días:")
 for empleado in empleados_menos_faltas:
-    print(empleado)
+    print(empleado) """
+
+
+# Inicializar la lista principal
+lista_principal = []
+
+# Crear las sublistas y agregarlas a la lista principal
+for i in range(1, 51):
+    sublista = list(range(1, i + 1))
+    lista_principal.append(sublista)
+
+# Imprimir la lista principal para verificar el resultado
+for sublista in lista_principal:
+    print(sublista)
