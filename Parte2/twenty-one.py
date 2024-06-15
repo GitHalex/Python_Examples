@@ -1,6 +1,6 @@
 #odds = [x for x in squares if x % 2 != 0 ]
 
-paises = []
+""" paises = []
 temperaturas = []
 for i in range(3):
   pais = input("Ingrese un pais: ")
@@ -31,4 +31,7 @@ for x in range(1, 3):
       temperaturaMayor = media_total[x]
       paisMayor = paises[x]
 
-print(paisMayor, temperaturaMayor)
+print(paisMayor, temperaturaMayor) """
+
+
+
