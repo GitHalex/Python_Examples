@@ -1,5 +1,4 @@
 
-
 def cantidadVocales(palabra: str) -> int:
     print(f"Palabra: {palabra}")
     contar_vocales = 0
