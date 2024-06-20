@@ -12,7 +12,8 @@ print(cantidadVocales("Alex López"))
 
 def ordenados(lista: list) -> list:
 
-    return lista.sort()
+    ordenar = sorted(lista)
+    return ordenar
 
 def cargarNumeros() -> list:
     listaNumeros = []
