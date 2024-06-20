@@ -10,3 +10,16 @@ def cantidadVocales(palabra: str) -> int:
 
 print(cantidadVocales("Alex López"))
 
+def ordenados(lista: list) -> list:
+
+    return lista.sort()
+
+def cargarNumeros() -> list:
+    listaNumeros = []
+    for i in range(3):
+        numero = int(input("Ingrese un numero"))
+        listaNumeros.append(numero)
+
+    return ordenados(listaNumeros)
+
+print(cargarNumeros())
