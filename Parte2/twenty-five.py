@@ -23,7 +23,7 @@ print(perimetroCuadrado(lado))
 print(perimetroCuadrado()) """
 
 
-def superficie(ancho: int, alto: int) -> int:
+""" def superficie(ancho: int, alto: int) -> int:
 
   superficie = ancho*2 + alto*2
 
@@ -40,4 +40,19 @@ segundoSuperficie = superficie(anchoSec, altoSec)
 if primerSuperficie > segundoSuperficie:
   print(f"El primer rectangulo: {primerSuperficie} es mas grande que el segundo: {segundoSuperficie}")
 else:
-  print(f"El segundo rectangulo: {segundoSuperficie} es mas grande que el primero: {primerSuperficie}")
+  print(f"El segundo rectangulo: {segundoSuperficie} es mas grande que el primero: {primerSuperficie}") """
+
+
+def cantidadDeA(cadena: str) -> int:
+
+  cadenaLower = cadena.lower()
+  cantidad = 0
+
+  for char in cadenaLower:
+    
+    if char == "a":
+      cantidad += 1
+
+  return cantidad
+
+print(cantidadDeA("Alex"))
