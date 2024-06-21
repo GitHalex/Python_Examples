@@ -12,6 +12,20 @@ listaNum=[3, 7, 8, 10, 2]
 print(multiplicar(listaNum,3))
 
 
+def mascaracteres(palabras: list) -> str:
+    
+    palabrasLarga = ""
+
+    for palabra in palabras:
+        if len(palabrasLarga) < len(palabra):
+            palabrasLarga = palabra
+
+    return palabrasLarga
+
+palabras=["enero", "febrero", "marzo", "abril", "mayo", "junio"]
+print("Palabra con mas caracteres:",mascaracteres(palabras))
+
+
 def sumarizar(lista):
     suma=0
     for x in range(len(lista)):
