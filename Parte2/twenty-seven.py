@@ -36,6 +36,47 @@ promedio = promedioSueldos(sueldos)
 print(f"El promedio de los sueldos es: {promedio}")
 mostrarMenores(sueldos) """
 
+def nombrePrecio() -> list:
+
+  nombreLista = []
+  precioLista = []
+  for i in range(5):
+    nombre = input("Ingresa un nombre: ")
+    nombreLista.append(nombre)
+    precio = float(input("Ingrese el precio: "))
+    precioLista.append(precio)
+  
+  return [nombreLista, precioLista]
+
+def imprimirPrecios(listaNombre: list, listaPrecios: list) -> list:
+
+  for i in range(len(listaNombre)):
+    print(f"{listaNombre[i]} => {listaPrecios[i]}")
+
+def preciosMayor(listaPrecios: list) -> list:
+  nuevoPrecio = []
+  subePrecio = int(input("Ingrese cuanto va a subir cada articulo: "))
+  for i in range(len(listaPrecios)):
+    nuevoPrecio.append(listaPrecios[i] + subePrecio)
+
+  return nuevoPrecio
+
+  
+
+
+
+nombres, precios = nombrePrecio()
+print("Impresion de Articulos y Precios")
+imprimirPrecios(nombres, precios)
+print("Impresion de Articulos con subida de precio")
+preciosAumentados = preciosMayor(precios)
+imprimirPrecios(nombres, preciosAumentados)
+
+
+
+
+
+
 
 
 
