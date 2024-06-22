@@ -61,8 +61,12 @@ def preciosMayor(listaPrecios: list) -> list:
 
   return nuevoPrecio
 
-  
+def precioImporte(listaPrecios: list) -> None:
 
+  importe = int(input("Ingrese un importe: "))
+  for precio in listaPrecios:
+    if precio <= importe:
+      print(precio)
 
 
 nombres, precios = nombrePrecio()
@@ -71,8 +75,8 @@ imprimirPrecios(nombres, precios)
 print("Impresion de Articulos con subida de precio")
 preciosAumentados = preciosMayor(precios)
 imprimirPrecios(nombres, preciosAumentados)
-
-
+print("Precios con importe ")
+precioImporte(precios)
 
 
 
