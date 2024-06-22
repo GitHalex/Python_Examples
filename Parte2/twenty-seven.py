@@ -1,53 +1,44 @@
-def sueldosPersonas() -> list:
+""" def sueldosPersonas() -> list:
     li=[]
     for x in range(10):
         valor=int(input("Ingrese valor:"))
         li.append(valor)
     return li
-
-
 def imprimirSueldos(li: list) -> None:
-    
     print("*******************************")
     print("*   Sueldos de los empleados  *")
-    print("*******************************")
-    
+    print("*******************************")   
     for i in range(len(li)):
-        
         print(f"{i+1} -> {li[i]}")
-
 def sueldosMayoresInferiores(sueldos: list) -> None:
-
     cantidad = 0
-
     for sueldo in sueldos:
         if sueldo > 40:
             cantidad += 1
         else:
-            print(f"sueldo inferior: {sueldo}")
-        
-
+            print(f"sueldo inferior: {sueldo}")       
     print(f"la lista: {sueldos} tiene {cantidad} superiores a 40")
-
-def promedioSueldos(listaSueldos: list) -> float:
-    
+def promedioSueldos(listaSueldos: list) -> float:    
     suma = 0
-
     for sueldo in listaSueldos:
         suma += sueldo
-
     promedio = suma/len(listaSueldos)
-
     return promedio
-
-
-
+def mostrarMenores(listaSueldos: list) -> None:
+    for sueldo in listaSueldos:
+        if sueldo < promedioSueldos(listaSueldos):
+            print(sueldo)
 # bloque principal del programa
 sueldos = sueldosPersonas()
 imprimirSueldos(sueldos)
 print(sueldosMayoresInferiores(sueldos))
 promedio = promedioSueldos(sueldos)
 print(f"El promedio de los sueldos es: {promedio}")
+mostrarMenores(sueldos) """
+
+
+
+
 """ def carga_lista():
     li=[]
     for x in range(5):
