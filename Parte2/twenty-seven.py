@@ -36,7 +36,7 @@ promedio = promedioSueldos(sueldos)
 print(f"El promedio de los sueldos es: {promedio}")
 mostrarMenores(sueldos) """
 
-def nombrePrecio() -> list:
+""" def nombrePrecio() -> list:
 
   nombreLista = []
   precioLista = []
@@ -54,6 +54,7 @@ def imprimirPrecios(listaNombre: list, listaPrecios: list) -> list:
     print(f"{listaNombre[i]} => {listaPrecios[i]}")
 
 def preciosMayor(listaPrecios: list) -> list:
+
   nuevoPrecio = []
   subePrecio = int(input("Ingrese cuanto va a subir cada articulo: "))
   for i in range(len(listaPrecios)):
@@ -76,9 +77,36 @@ print("Impresion de Articulos con subida de precio")
 preciosAumentados = preciosMayor(precios)
 imprimirPrecios(nombres, preciosAumentados)
 print("Precios con importe ")
-precioImporte(precios)
+precioImporte(precios) """
 
 
+def cargarLista() -> list:
+
+  listaTen = []
+  for i in range(10):
+    numero = int(input("Ingrese un numero positivos o negativos: "))
+    listaTen.append(numero)
+
+  return listaTen
+
+def positivoNegativo(listaNum: list) -> list:
+
+  positivos = [i for i in listaNum if i >= 0]
+  negativos = [j for j in listaNum if j < 0]
+
+  return [positivos, negativos]
+
+
+listaNumero = cargarLista()
+numerosPositivos, numerosNegativos = positivoNegativo(listaNumero)
+
+print("Numeros Positivos")
+for positivo in numerosPositivos:
+  print(positivo)
+
+print("Numeros Negativos")
+for negativo in numerosNegativos:
+  print(negativo)
 
 
 
