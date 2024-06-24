@@ -1,4 +1,3 @@
-
 def productoTen(numero: int, multiplicador: int=10) -> str:
     imprimir = ""
     for i in range(1, multiplicador + 1):
