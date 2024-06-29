@@ -1,4 +1,4 @@
-def cargarEnteros()-> list:
+""" def cargarEnteros()-> list:
    listaEnteros = [int(input("Ingrese un numero entero: ")) for _ in range(5)]
    return listaEnteros
 
@@ -17,7 +17,31 @@ def mayorMenor(listaEnteros: list) -> tuple:
 
 numeros = cargarEnteros()
 mayorTupla, menorTupla = mayorMenor(numeros)
-print(f"Convertido a tupla: Mayor: {mayorTupla} y Menor: {menorTupla}")
+print(f"Convertido a tupla: Mayor: {mayorTupla} y Menor: {menorTupla}") """
+
+
+
+def nameSueldo() -> tuple:
+
+  name = input("Ingrese un nombre: ")
+  sueldo= int(input("Ingrese su sueldo: "))
+  return (name, sueldo)
+
+def mayorSueldo(empleado1: tuple, empleado2: tuple) -> str:
+  mayorSueldo = empleado1[1]
+  if mayorSueldo < empleado2[1]:
+    # mayorSueldo = empleado2[1]
+    return empleado2[0]
+  
+  return empleado1[0]
+
+empleado1 = nameSueldo()
+empleado2= nameSueldo()
+print(f"la empleado que tiene un sueldo mayor es: {mayorSueldo(empleado1, empleado2)}")
+
+
+
+
 
 
 """ def tuplas(number: int) -> tuple:
