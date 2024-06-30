@@ -1,4 +1,4 @@
-""" def empleados() -> list:
+def empleados() -> list:
     empleadosLista = []
     for i in range(3):
         name = input("Ingrese su nombre: ")
@@ -28,7 +28,7 @@ def sueldosMayores(listaSueldos: list) -> None:
 
 empleadolista = empleados()
 sumaSueldos(empleadolista)
-sueldosMayores(empleadolista) """
+sueldosMayores(empleadolista)
 
 
 def addCandidatos() -> list:
@@ -53,10 +53,7 @@ def imprimirVotos(candidatos: list) -> None:
 candidatos = addCandidatos()
 print(imprimirVotos(candidatos))
 
-
-
         
-
 """ def cargar_paisespoblacion():
     paises=[]
     for x in range(5):
