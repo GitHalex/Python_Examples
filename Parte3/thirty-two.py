@@ -42,7 +42,16 @@ def addCandidatos() -> list:
       
     return listaRes
 
-print(addCandidatos())
+def imprimirVotos(candidatos: list) -> None:
+    
+    for candidato in candidatos:
+        nombre = candidato[0]
+        votosProvincia = candidato[1]
+        for provincia, votos in votosProvincia:
+            print(f"{nombre} => provincia: {provincia}, votos: {votos}")
+
+candidatos = addCandidatos()
+print(imprimirVotos(candidatos))
 
 
 
