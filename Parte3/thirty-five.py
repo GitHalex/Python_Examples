@@ -20,7 +20,7 @@ def imprimir(alumnos: dict) -> None:
 def consulta(alumnos):
     ci=str(int(input("Ingrese el codigo de articulo a consultar:")))
     if ci in alumnos:
-        print(alumnos[ci][0])
+        print(f"ci: {ci} materia: {alumnos[ci][0]} nota => {alumnos[ci][1]}")
     else:
         print(f"ci: {ci} no existe")
         
