@@ -71,10 +71,16 @@ def modificarSueldo(diccionario: dict) -> None:
     else:
       print(f"{numClave} numero clave no existe en el diccionario: {diccionario}")
 
+def imprimirAnalista(diccionario: dict) -> None:
+   for clave in diccionario:
+      if diccionario[clave][1] == "analista de sistemas":
+         print(diccionario[clave][0])
+
 diccionarioEmpleados = cargarDatos()
 print(diccionarioEmpleados)
 modificarSueldo(diccionarioEmpleados)
 print(diccionarioEmpleados)
+imprimirAnalista(diccionarioEmpleados)
 
 
 """ def cargar():
