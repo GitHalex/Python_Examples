@@ -11,7 +11,20 @@ listaMitad = primerMitad(lista)
 print(f"lista Mitad primera: {listaMitad}")
 print(lista)
 
+def dosCaracteres(frase: str) -> None:
+    print(frase[:2])
 
+def dosUltimos(frase: str) -> None:
+    print(frase[-2:])
+
+def menos(frase: str) -> None:
+    tam = len(frase) - 1
+    print(frase[1:tam])
+
+frase = "Hanyinson"
+dosCaracteres(frase)
+dosUltimos(frase)
+menos(frase)
 
 """ lista1=[0,1,2,3,4,5,6]
 lista2=lista1[2:5]
