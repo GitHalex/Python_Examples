@@ -1,4 +1,4 @@
-def cargar():
+""" def cargar():
     lista=[]
     continua="s"
     while continua=="s":
@@ -47,9 +47,37 @@ def imprimir(nombres):
 # bloque principal
 nombres=cargar()
 ordenar(nombres)
-imprimir(nombres)
+imprimir(nombres) """
 
-def cargar():
+def cargarDatos() -> dict:
+    datosEmpleados = {}
+    
+    for i in range(3):
+        numero = int(input("Ingrese un numero: "))
+        nombre = input("Ingrese el nombre de un empleado: ")
+        profesion = input("Ingrese su profesion: ")
+        sueldo = float(input("Ingrese su sueldo: "))
+        datosEmpleados[numero] = [nombre, profesion, sueldo]
+      
+    return datosEmpleados
+
+def modificarSueldo(diccionario: dict) -> None:
+    
+    numClave = int(input("Ingrese el numero para modificar sueldo: "))
+    
+    if numClave in diccionario:
+      sueldoModificado = float(input("Ingrese un nuevo sueldo: "))
+      diccionario[numClave][2] = sueldoModificado
+    else:
+      print(f"{numClave} numero clave no existe en el diccionario: {diccionario}")
+
+diccionarioEmpleados = cargarDatos()
+print(diccionarioEmpleados)
+modificarSueldo(diccionarioEmpleados)
+print(diccionarioEmpleados)
+
+
+""" def cargar():
     contactos={}
     continua="s"
     while continua=="s":
@@ -79,4 +107,4 @@ def imprimir(contactos):
 
 contactos=cargar()
 modificar_telefono(contactos)
-imprimir(contactos)
+imprimir(contactos) """
