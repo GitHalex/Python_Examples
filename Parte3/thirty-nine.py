@@ -16,3 +16,21 @@ imprimir(lista)
 mezclar(lista)
 print("La misma lista luego de mezclar")
 imprimir(lista)
+
+
+def generarNumero() -> int:
+  return r.randint(1, 10)
+
+numeroAleatorio = generarNumero()
+
+while True:
+  numero = int(input("Ingrese un numero: "))
+  if numeroAleatorio == numero:
+    print("Gano!!")
+    break
+  elif numeroAleatorio > numero:
+    print("El numero aleatorio es mayor")
+  else:
+    print("El numero aleatorio es menor")
+
+  
