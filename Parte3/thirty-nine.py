@@ -34,3 +34,24 @@ while True:
     print("El numero aleatorio es menor")
 
   
+def cargarNumeros() -> list:
+  listaNumeros = [r.randint(1,3) for i in range(3)]
+  listaNumeros.append(1)
+  return listaNumeros
+
+def controlarUno(listaNum: list) -> list:
+
+  while True:
+    if listaNum[0] != 1:
+      listaNum[0] = 1
+      break
+    else:
+      break
+
+  return listaNum
+
+
+
+print(cargarNumeros())
+listaNum = cargarNumeros()
+print(controlarUno(listaNum))
