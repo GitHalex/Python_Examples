@@ -26,7 +26,7 @@ dosCaracteres(frase)
 dosUltimos(frase)
 menos(frase)
 
-""" lista1=[0,1,2,3,4,5,6]
+lista1=[0,1,2,3,4,5,6]
 lista2=lista1[2:5]
 print(lista2) # 2,3,4
 lista3=lista1[1:3]
@@ -34,9 +34,9 @@ print(lista3) # 1,2
 lista4=lista1[:3]
 print(lista4) # 0,1,2
 lista5=lista1[2:]
-print(lista5) # 2,3,4,5,6 """
+print(lista5) # 2,3,4,5,6 
 
-""" def meses_faltantes(numeromes):
+def meses_faltantes(numeromes):
     meses=('enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre')
     return meses[numeromes:]
 
@@ -56,4 +56,4 @@ def primeros_tres(cadena):
 
 meses=('enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre')
 for x in meses:
-    print(primeros_tres(x)) """
+    print(primeros_tres(x))
