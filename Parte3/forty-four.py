@@ -1,4 +1,4 @@
-class Empleado:
+""" class Empleado:
 
     def __init__(self):
         self.nombre=input("Ingrese el nombre del empleado:")
@@ -66,4 +66,42 @@ class Cuadrado:
 
 cuadrado1 = Cuadrado(4)
 cuadrado1.perimetro()
-cuadrado1.area()
+cuadrado1.area() """
+
+
+class Operaciones:
+    def __init__(self, primer_numero: int, segundo_numero: int) -> None:
+        self.primer_numero = primer_numero
+        self.segundo_numero = segundo_numero
+
+    @classmethod
+    def desde_entrada_del_usuario(cls):
+        primer_numero = int(input("Ingrese el primer número: "))
+        segundo_numero = int(input("Ingrese el segundo número: "))
+        return cls(primer_numero, segundo_numero)
+
+    def sumar(self) -> int:
+        return self.primer_numero + self.segundo_numero
+
+    def restar(self) -> int:
+        return abs(self.primer_numero - self.segundo_numero)
+
+    def multiplicar(self) -> int:
+        return self.primer_numero * self.segundo_numero
+
+    def dividir(self) -> float:
+        if self.segundo_numero == 0:
+            raise ValueError("División por cero no permitida")
+        return self.primer_numero / self.segundo_numero
+
+
+# Ejemplo de uso
+if __name__ == "__main__":
+    operacion1 = Operaciones.desde_entrada_del_usuario()
+    print(f"Suma: {operacion1.sumar()}")
+    print(f"Resta: {operacion1.restar()}")
+    print(f"Multiplicación: {operacion1.multiplicar()}")
+    try:
+        print(f"División: {operacion1.dividir()}")
+    except ValueError as e:
+        print(e)
