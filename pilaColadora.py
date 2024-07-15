@@ -23,9 +23,13 @@ class AddingStack(Stack):
         super().__init__()
         self._sum: int = 0
         self._contador: int = 0
+        self._contadorAgregados: int = 0
 
     def get_contador(self) -> int:
         return self._contador
+
+    def get_add(self) -> int:
+        return self._contadorAgregados
 
     def get_sum(self) -> int:
         """Return the sum of all values in the stack."""
@@ -35,6 +39,7 @@ class AddingStack(Stack):
         """Push a value onto the stack and add it to the sum."""
         self._sum += val
         super().push(val)
+        self._contadorAgregados += 1
 
     def pop(self) -> int:
         """Pop a value from the stack and subtract it from the sum. Raise an IndexError if the stack is empty."""
@@ -47,10 +52,12 @@ class AddingStack(Stack):
 
 if __name__ == "__main__":
     stack_object = AddingStack()
-    for i in range(5):
+    for i in range(3):
         stack_object.push(i)
 
     print(f"Sum of elements in stack: {stack_object.get_sum()}")
+    print(
+        f"Cantidad de elementos agregados: {stack_object.get_add()}")
 
     while True:
         try:
