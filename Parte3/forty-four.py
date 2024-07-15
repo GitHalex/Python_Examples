@@ -1,4 +1,4 @@
-""" class Empleado:
+class Empleado:
 
     def __init__(self):
         self.nombre=input("Ingrese el nombre del empleado:")
@@ -66,7 +66,7 @@ class Cuadrado:
 
 cuadrado1 = Cuadrado(4)
 cuadrado1.perimetro()
-cuadrado1.area() """
+cuadrado1.area()
 
 
 class Operaciones:
