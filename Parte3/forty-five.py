@@ -58,15 +58,29 @@ class AgendaPersonal:
         print("Consulta de nombre: ")
         nombreConsulta = input("Ingrese un nombre a consultar: ")
 
-        for name, telefono, mail in zip(self.names, self.telefonos, self.mails):
-            if name == nombreConsulta:
-                print("El nombre existe!!! ")
-                print(f"{name} => {telefono} => {mail}")
-            else:
-                print(f"El nombre: {nombreConsulta} no existe en la lista: {self.names}")
+        if nombreConsulta in self.names:
+            for name, telefono, mail in zip(self.names, self.telefonos, self.mails):
+              if name == nombreConsulta:
+                  print("El nombre existe!!! ")
+                  print(f"{name} => {telefono} => {mail}")
+        else:
+            print(f"El nombre: {nombreConsulta} no existe en la lista: {self.names}")
+        
+          
     
-    def list_modificacion(self):
-        pass
+    def list_modificacion(self) -> list:
+        print("Ingrese le nombre y si hay lo vamos a modificar")
+        nombreModificar = input("Ingrese el nombre para modificar solo si existe: ")
+        if nombreModificar in self.names:
+            print("El nombre existe!!! ")
+            for i in range(len(self.names)):
+              if self.names[i] == nombreModificar:
+                  self.telefonos[i] = int(input("Ingrese su telefono actual: "))
+                  self.mails[i] = input("Ingrese su nuevo correo")
+        else:
+            print(f"El nombre: {nombreModificar} no existe en la lista: {self.names}")
+        
+
     
 
     """def list_high_grades(self) -> None:
