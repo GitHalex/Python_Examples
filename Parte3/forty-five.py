@@ -81,16 +81,6 @@ class AgendaPersonal:
             print(f"El nombre: {nombreModificar} no existe en la lista: {self.names}")
         
 
-    
-
-    """def list_high_grades(self) -> None:
-        # List students with grades greater than or equal to 7.
-        print("Students with grades >= 7:")
-        for name, grade in zip(self.names, self.grades):
-            if grade >= 7:
-                print(f"{name}: {grade}")
-        print("_____________________")"""
-
 
 if __name__ == "__main__":
     manager = AgendaPersonal()
