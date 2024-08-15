@@ -26,7 +26,6 @@ class Cliente:
         """Imprime el nombre del cliente y su monto actual."""
         print(f"{self.nombre} tiene depositado la suma de {self.monto}")
 
-
 class Banco:
     def __init__(self) -> None:
         """Inicializa el banco con tres clientes predeterminados."""
@@ -35,7 +34,6 @@ class Banco:
             Cliente("Ana"),
             Cliente("Diego")
         ]
-
     def operar(self) -> None:
         """Realiza operaciones de depósito y extracción para los clientes."""
         self.clientes[0].depositar(100)
@@ -50,7 +48,6 @@ class Banco:
         print(f"El total de dinero del banco es: {total}")
         for cliente in self.clientes:
             cliente.imprimir()
-
 
 if __name__ == "__main__":
     banco1 = Banco()
