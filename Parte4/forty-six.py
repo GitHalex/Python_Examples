@@ -87,6 +87,36 @@ class JuegoDeDados:
           print("Perdio")
 
 
-juego_dados = JuegoDeDados()
-juego_dados.jugar()
+""" juego_dados = JuegoDeDados()
+juego_dados.jugar() """
 
+class Socio:
+    
+    def __init__(self, nombre: str, antiguedad: str) -> None:
+        self.nombre = nombre
+        self.antiguedad = antiguedad
+
+    @classmethod
+    def entrada_usuario(cls):
+        nombre = input("Ingrese el nombre del socio: ")
+        antiguedad = input("Ingrese el mes y año ejemplo 'ENERO 2024'")
+        return cls(nombre, antiguedad)
+    
+    def mostrar(self):
+        print(f"{self.nombre} => {self.antiguedad}")
+
+class Club:
+    
+    def __init__(self) -> None:
+        self.socios = [
+            Socio.entrada_usuario(),
+            Socio.entrada_usuario()
+        ]
+
+    def imprimir(self):
+        self.socios[0].mostrar()
+
+
+if __name__ == "__main__":
+    socio = Club()
+    socio.imprimir()
