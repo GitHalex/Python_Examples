@@ -56,17 +56,28 @@ class EmpleadoArtista(Persona, Artista):
     self.salario = salario
     self.trabajo = trabajo
 
+
+  @classmethod
+  def entrada_empleado_artista(cls):
+    nombre = input("Ingrese el nombre: ")
+    edad = int(input("Ingrese su edad: "))
+    trabajo = input("Cual es tu puesto de trabajo")
+    salario = int(input("Cual es tu sueldo: "))
+    habilidad = input("Ingrese su habilidad: ")
+    return cls(nombre, edad, habilidad, trabajo, salario)
+
+
   def presentarse(self):
     return f"{self.mostrar_habilidad()}"
 
 
-persona1 = Persona.entrada_usuario()
+""" persona1 = Persona.entrada_usuario()
 persona1.imprimir()
 print("-----------------------------------------------")
 empleado1 = Empleado.entrada_trabajo_salario()
 empleado1.imprimir()
-empleado1.paga_impuestos()
+empleado1.paga_impuestos() """
 
-""" roberto = EmpleadoArtista("Roberto", 43, "Cantar", "Programador", 1000)
-roberto.presentarse() """
+roberto = EmpleadoArtista.entrada_empleado_artista()
+roberto.presentarse()
 
