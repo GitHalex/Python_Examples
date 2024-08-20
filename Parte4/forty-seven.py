@@ -26,9 +26,11 @@ class Empleado(Persona):
 
   @classmethod
   def entrada_trabajo_salario(cls):
+    nombre = input("Ingrese el nombre: ")
+    edad = int(input("Ingrese su edad: "))
     trabajo = input("Cual es tu puesto de trabajo")
     salario = int(input("Cual es tu sueldo: "))
-    return cls(trabajo, salario)
+    return cls(nombre, edad, trabajo, salario)
   
   def imprimir(self):
     super().imprimir()
@@ -40,6 +42,23 @@ class Empleado(Persona):
     else:
       print("No paga impuestos")
 
+class Artista:
+  def __init__(self, habilidad: str) -> None:
+    self.habilidad = habilidad
+
+  def mostrar_habilidad(self):
+    print(f"Mi habilidad es: {self.habilidad}")
+
+class EmpleadoArtista(Persona, Artista):
+  def __init__(self, nombre: str, edad: int, habilidad: str, trabajo: str, salario: float) -> None:
+    Persona.__init__(self, nombre, edad)
+    Artista.__init__(self, habilidad)
+    self.salario = salario
+    self.trabajo = trabajo
+
+  def presentarse(self):
+    return f"{self.mostrar_habilidad()}"
+
 
 persona1 = Persona.entrada_usuario()
 persona1.imprimir()
@@ -47,3 +66,7 @@ print("-----------------------------------------------")
 empleado1 = Empleado.entrada_trabajo_salario()
 empleado1.imprimir()
 empleado1.paga_impuestos()
+
+""" roberto = EmpleadoArtista("Roberto", 43, "Cantar", "Programador", 1000)
+roberto.presentarse() """
+
