@@ -61,14 +61,14 @@ class EmpleadoArtista(Persona, Artista):
   def entrada_empleado_artista(cls):
     nombre = input("Ingrese el nombre: ")
     edad = int(input("Ingrese su edad: "))
-    trabajo = input("Cual es tu puesto de trabajo")
+    trabajo = input("Cual es tu puesto de trabajo: ")
     salario = int(input("Cual es tu sueldo: "))
     habilidad = input("Ingrese su habilidad: ")
     return cls(nombre, edad, habilidad, trabajo, salario)
 
 
   def presentarse(self):
-    return f"{self.mostrar_habilidad()}"
+    return f"{super().mostrar_habilidad()}"
 
 
 """ persona1 = Persona.entrada_usuario()
@@ -81,3 +81,8 @@ empleado1.paga_impuestos() """
 roberto = EmpleadoArtista.entrada_empleado_artista()
 roberto.presentarse()
 
+herenciaHeredada = issubclass(EmpleadoArtista, Artista)
+print(herenciaHeredada)
+
+instacia = isinstance(roberto, EmpleadoArtista)
+print(instacia)
