@@ -78,11 +78,27 @@ empleado1 = Empleado.entrada_trabajo_salario()
 empleado1.imprimir()
 empleado1.paga_impuestos() """
 
-roberto = EmpleadoArtista.entrada_empleado_artista()
+""" roberto = EmpleadoArtista.entrada_empleado_artista()
 roberto.presentarse()
 
 herenciaHeredada = issubclass(EmpleadoArtista, Artista)
 print(herenciaHeredada)
 
 instacia = isinstance(roberto, EmpleadoArtista)
-print(instacia)
+print(instacia) """
+
+
+
+class Cuenta:
+  def __init__(self, name: str, monto: int) -> None:
+    self.name = name
+    self.monto = monto
+    
+    pass
+  pass
+
+class CajaAhorro:
+  pass
+
+class PlazoFijo:
+  pass
