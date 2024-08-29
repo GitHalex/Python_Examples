@@ -90,15 +90,30 @@ print(instacia) """
 
 
 class Cuenta:
-  def __init__(self, name: str, monto: int) -> None:
-    self.name = name
+  def __init__(self, nombre: str, monto: int) -> None:
+    self.nombre = nombre
     self.monto = monto
-    
+
+  def mostrarNombre(self) -> str:
+    return self.nombre
+  
+  def montoActual(self) -> int:
+    return self.monto
+  
+
+class PlazoFijo(Cuenta):
+  def __init__(self, nombre: str, monto: int, dias: int, tasaInteres: float ) -> None:
+    Cuenta.__init__(nombre, monto)
+    self.dias = dias
+    self.tasaInteres = tasaInteres
+
+  def dias(self):
+    print(f"{self.dias} que hay que pagar")
+
+class CajaAhorro(Cuenta):
+  def __init__(self) -> None:
+    Cuenta.__init__()
+
     pass
-  pass
 
-class CajaAhorro:
-  pass
 
-class PlazoFijo:
-  pass
