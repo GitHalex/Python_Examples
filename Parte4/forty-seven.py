@@ -89,31 +89,55 @@ print(instacia) """
 
 
 
+# Clase Base
 class Cuenta:
-  def __init__(self, nombre: str, monto: int) -> None:
-    self.nombre = nombre
-    self.monto = monto
+    def __init__(self, nombre: str, monto: int) -> None:
+        self.nombre = nombre
+        self.monto = monto
 
-  def mostrarNombre(self) -> str:
-    return self.nombre
-  
-  def montoActual(self) -> int:
-    return self.monto
-  
+    def mostrarNombre(self) -> str:
+        return self.nombre
 
+    def montoActual(self) -> int:
+        return self.monto
+
+    def mostrar_informacion(self):
+        print(f"Titular: {self.nombre}, Monto actual: {self.monto}")
+
+# Subclase PlazoFijo
 class PlazoFijo(Cuenta):
-  def __init__(self, nombre: str, monto: int, dias: int, tasaInteres: float ) -> None:
-    Cuenta.__init__(nombre, monto)
-    self.dias = dias
-    self.tasaInteres = tasaInteres
+    def __init__(self, nombre: str, monto: int, dias: int, tasaInteres: float) -> None:
+        super().__init__(nombre, monto)  # Se llama al constructor de la clase base correctamente
+        self.dias = dias
+        self.tasaInteres = tasaInteres
 
-  def dias(self):
-    print(f"{self.dias} que hay que pagar")
+    def calcular_intereses(self) -> float:
+        # Calcula los intereses según la tasa y el plazo
+        intereses = self.monto * (self.tasaInteres / 100) * (self.dias / 365)
+        print(f"Intereses generados: {intereses}")
+        return intereses
 
+    def mostrar_informacion(self):
+        super().mostrar_informacion()  # Muestra información básica
+        print(f"Días: {self.dias}, Tasa de interés: {self.tasaInteres}%")
+
+# Subclase CajaAhorro
 class CajaAhorro(Cuenta):
-  def __init__(self) -> None:
-    Cuenta.__init__()
+    def __init__(self, nombre: str, monto: int) -> None:
+        super().__init__(nombre, monto)  # Se llama al constructor de la clase base correctamente
 
-    pass
+    def mostrar_informacion(self):
+        super().mostrar_informacion()  # Muestra información básica
+        print("Esta cuenta no genera intereses.")
+
+# Bloque Principal del Programa
+caja_ahorro = CajaAhorro("Juan Pérez", 5000)
+plazo_fijo = PlazoFijo("Ana Gómez", 10000, 30, 5)
+
+# Muestra la información de las cuentas
+caja_ahorro.mostrar_informacion()
+plazo_fijo.mostrar_informacion()
+plazo_fijo.calcular_intereses()
+
 
 
