@@ -1,5 +1,10 @@
-lado=input("Ingrese la medida del lado del cuadrado:")
-lado=int(lado)
-superficie=lado*lado
-print("La superficie del cuadrado es")
-print(superficie)
+lista=[10,7,3,7,2]
+suma=0
+x=0
+while x<len(lista):
+    suma=suma+lista[x]
+    x=x+1
+print("Los elementos de la lista son")
+print(lista)
+print("La suma de todos sus elementos es")    
+print(suma)    
