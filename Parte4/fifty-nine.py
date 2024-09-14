@@ -49,3 +49,38 @@ class Aplicacion:
 aplicacion1=Aplicacion()   """
 
 import tkinter as tk 
+
+class Aplicacion:
+  def __init__(self) -> None:
+    self.ventana = tk.Tk()
+    self.label = tk.Label(self.ventana, text="Ingrese un numero 1: ")
+    self.label.grid(column=0, row=0)
+
+    self.dato = tk.StringVar()
+    self.entry1 = tk.Entry(self.ventana, width=10, textvariable=self.dato)
+    self.entry1.grid(column=1, row=0)
+    
+    self.label1 = tk.Label(self.ventana, text="Ingrese un numero 2: ")
+    self.label1.grid(column=0, row=1)
+    
+    self.dato2 = tk.StringVar()
+    self.entry2 = tk.Entry(self.ventana, width=10, textvariable=self.dato2)
+    self.entry2.grid(column=1, row=1)
+    
+    self.boton = tk.Button(self.ventana, text="Calcular la suma", command=self.calcularSuma)
+    self.boton.grid(column=0, row=2)
+    
+    self.labe2 = tk.Label(self.ventana, text="resultado")
+    self.labe2.grid(column=1, row=2)
+
+    self.ventana.mainloop()
+    
+  def calcularSuma(self):
+    valor1 = int(self.dato.get())
+    valor2 = int(self.dato2.get())
+    suma = valor1 + valor2
+    self.labe2.configure(text=suma)
+    
+aplicacion = Aplicacion()
+    
+    
