@@ -99,14 +99,27 @@ class Aplicacion:
     self.label2.grid(column=0, row=1)
     
     self.password = tk.StringVar()
-    self.entry2 = tk.Entry(self.ventana1, width=30, textvariable=self.password, show="*")
+    self.entry2 = tk.Entry(self.ventana1, width=20, textvariable=self.password, show="*")
     self.entry2.grid(column=1, row=1)
     
     self.boton = tk.Button(self.ventana1, text="mostrar", command=self.mostrar)
     self.boton.grid(column=0, row=2)
     
+    self.label3 = tk.Label(self.ventana1, text="Resultado")
+    self.label3.grid(column=0, row=3)
+    
     self.ventana1.mainloop()
     
   def mostrar(self):
     contrasena = self.password.get()
-    if contrasena == self.password
+    print(contrasena)
+    if contrasena == "abc123":
+      res = "Contraseña correcta"
+    else:
+      res = "Contraseña incorrecta"
+      
+    # Actualiza el texto del label
+    self.label3.configure(text=res)
+
+aplicacion = Aplicacion()
+aplicacion.mostrar()
