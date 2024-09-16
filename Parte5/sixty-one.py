@@ -62,3 +62,33 @@ class Aplicacion_One:
     
 # aplicaion_one = Aplicacion_One()
 
+class Aplicacion_Nav:
+  def __init__(self) -> None:
+    self.ventana = tk.Tk()
+    
+    self.seleccion1 = tk.IntVar()
+    self.check1 = tk.Checkbutton(self.ventana, text="Google Chrome", variable=self.seleccion1)
+    self.check1.grid(column=0, row=0)
+    
+    self.seleccion2 = tk.IntVar()
+    self.check2 = tk.Checkbutton(self.ventana, text="Microsoft Edge", variable=self.seleccion2)
+    self.check2.grid(column=0, row=1)
+    
+    self.seleccion3 = tk.IntVar()
+    self.check3 = tk.Checkbutton(self.ventana, text="Brave", variable=self.seleccion3)
+    self.check3.grid(column=0, row=2)
+    
+    self.boton_uno = tk.Button(self.ventana, text="navegador", command=self.navegador)
+    self.boton_uno.grid(column=0, row=3)
+    
+    self.ventana.mainloop()
+    
+    
+  def navegador(self):
+    if self.seleccion1.get() == 1: self.ventana.title("Google Chrome")
+    if self.seleccion2.get() == 2: self.ventana.title("Microsoft Edge")
+    if self.seleccion3.get() == 3: self.ventana.title("Brave")
+    
+
+    
+navegador = Aplicacion_Nav()
