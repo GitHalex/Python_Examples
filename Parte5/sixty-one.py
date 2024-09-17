@@ -83,7 +83,6 @@ class Aplicacion_Nav:
     
     self.ventana.mainloop()
     
-    
   def navegador(self):
     if self.seleccion1.get() == 1: self.ventana.title("Google Chrome")
     if self.seleccion2.get() == 2: self.ventana.title("Microsoft Edge")
