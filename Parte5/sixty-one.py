@@ -84,9 +84,13 @@ class Aplicacion_Nav:
     self.ventana.mainloop()
     
   def navegador(self):
-    if self.seleccion1.get() == 1: self.ventana.title("Google Chrome")
-    if self.seleccion2.get() == 2: self.ventana.title("Microsoft Edge")
-    if self.seleccion3.get() == 3: self.ventana.title("Brave")
+    # Cambiar el título de la ventana según la selección
+    if self.seleccion1.get() == 1: 
+      self.ventana.title("Google Chrome")
+    elif self.seleccion2.get() == 1: 
+      self.ventana.title("Microsoft Edge")
+    elif self.seleccion3.get() == 1: 
+      self.ventana.title("Brave")
     
 
     
