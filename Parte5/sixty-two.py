@@ -56,7 +56,7 @@ aplicacion1 = Aplicacion() """
 
 aplicacion = Aplicacion() """
 
-class Aplicacion:
+""" class Aplicacion:
   def __init__(self) -> None:
     self.ventana1 = tk.Tk()
 
@@ -95,5 +95,38 @@ class Aplicacion:
         todas += self.listbox1.get(posicion) + "\n"
 
       self.label1.configure(text=todas)
+      
+aplicacion = Aplicacion() """
+
+class Aplicacion:
+  def __init__(self) -> None:
+    self.ventana1 = tk.Tk()
+    
+    self.nombre = tk.StringVar()
+    self.entry1 = tk.Entry(self.ventana1, width=20, textvariable=self.nombre)
+    self.entry1.grid(column=0, row=0)
+
+    self.listbox1 = tk.Listbox(self.ventana1)
+    self.listbox1.grid(column=0, row=1)
+    self.listbox1.insert(0, "Bolivia")
+    self.listbox1.insert(1, "Peru")
+    self.listbox1.insert(2, "Chile")
+    self.listbox1.insert(3, "Brasil")
+    
+    self.boton1 = tk.Button(self.ventana1, text="Mostrar Dato", command=self.mostrar)
+    self.boton1.grid(column=0, row=2)
+    
+    self.labelNombre = tk.Label(self.ventana1, text="Nombre")
+    self.labelNombre.grid(column=0, row=3)
+
+    self.labelPais = tk.Label(self.ventana1, text="Nacionalidad")
+    self.labelPais.grid(column=1, row=3)
+    
+    self.ventana1.mainloop()
+    
+  def mostrar(self):
+    self.labelNombre.configure(text=self.nombre.get())
+    if len(self.listbox1.curselection()) != 0:
+      self.labelPais.configure(text=self.listbox1.get(self.listbox1.curselection()[0]))
       
 aplicacion = Aplicacion()
