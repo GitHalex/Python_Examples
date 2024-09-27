@@ -1,4 +1,4 @@
-import tkinter as tk 
+""" import tkinter as tk 
 from tkinter import ttk 
 from tkinter import messagebox as mb 
 
@@ -9,7 +9,10 @@ class Aplicacion:
     self.labelframe1.grid(column=0, row=0, padx=10, pady=10)
     self.agregar_componentes()
     self.agregar_menu()
+    
     self.ventana1.mainloop()
+    
+  
 
   def agregar_componentes(self):
     self.label1 = ttk.Label(self.labelframe1, text="Ingrese primer valor: ")
@@ -51,4 +54,29 @@ class Aplicacion:
   def acerca(self):
     mb.showinfo("Informacion", "Es programa fue desarrollado para el aprendizaje de Python")
 
-aplicacion = Aplicacion()
+aplicacion = Aplicacion() """
+
+import tkinter as tk
+from tkinter import messagebox as mb
+import sys
+
+class Aplicacion:
+    def __init__(self):
+        self.ventana1=tk.Tk()
+        self.agregar_menu()
+        self.ventana1.mainloop()
+
+    def agregar_menu(self):
+        self.menubar1 = tk.Menu(self.ventana1)
+        self.ventana1.config(menu=self.menubar1)
+        self.opciones1 = tk.Menu(self.menubar1, tearoff=0)
+        self.opciones1.add_command(label="Salir", command=self.salir)
+        self.menubar1.add_cascade(label="Opciones", menu=self.opciones1)    
+
+    def salir(self):
+        respuesta=mb.askyesno("Cuidado", "¿Quiere salir del programa?")
+        if respuesta==True:
+            sys.exit()
+        
+
+aplicacion1=Aplicacion() 
