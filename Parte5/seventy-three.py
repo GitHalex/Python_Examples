@@ -20,7 +20,7 @@ from tkinter import ttk
     
 aplicacion = Aplicacion() """
 
-class Aplicacion:
+""" class Aplicacion:
   def __init__(self) -> None:
     self.ventana1 = tk.Tk()
     
@@ -83,6 +83,10 @@ class Aplicacion:
     self.canvas1.create_text(largo3+70, 270, text="partido C", fill="white", font="Arial")
     
 aplicacion = Aplicacion()
+ """
+
+import tkinter as tk 
+from tkinter import ttk 
 
 
 
