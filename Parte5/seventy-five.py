@@ -20,5 +20,40 @@ class Aplicacion:
     self.ventana1.mainloop()
 
   def crear_botones(self):
+    self.labelframe1 = ttk.LabelFrame(self.ventana1, text="opciones")
+    self.labelframe1.grid(column=0, row=0, sticky="w", padx=5, pady=5)
     
+    self.boton1 = ttk.Button(self.labelframe1, text="borrar linea", command=self.borrar_linea)
+    self.boton1.grid(column=0, row=0, padx=5)
+
+    self.boton2 = ttk.Button(self.labelframe1, text="borrar rectangulo", command=self.borrar_rectangulo)
+    self.boton2.grid(column=1, row=0, padx=5)
+    
+    self.boton3 = ttk.Button(self.labelframe1, text="borrar óvalo", command=self.borrar_ovalo)
+    self.boton3.grid(column=2, row=0, padx=5)
+
+    self.boton4 = ttk.Button(self.labelframe1, text="borrar todos los cuadrados", command=self.borrar_cuadrados)
+    self.boton4.grid(column=3, row=0, padx=5)
+    
+    self.boton5 = ttk.Button(self.labelframe1, text="borrar todos", command=self.borrar_todos)
+    self.boton5.grid(column=4, row=0, padx=5)
+    
+  def borrar_linea(self):
+    self.canvas1.delete(self.linea)
+
+  def borrar_rectangulo(self):
+    self.canvas1.delete(self.rectangulo)
+
+  def borrar_ovalo(self):
+    self.canvas1.delete(self.ovalo)
+
+  def borrar_cuadrados(self):
+    self.canvas1.delete("cuadrado")
+
+  def borrar_todos(self):
+    self.canvas1.delete(tk.ALL)
+
+aplicacion = Aplicacion()
+
+
 
