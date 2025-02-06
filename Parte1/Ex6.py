@@ -1,5 +1,5 @@
 # calculadora en base a los numeros de entrada
-""" num1 = int(input("ingrese un numero: "))
+num1 = int(input("ingrese un numero: "))
 num2 = int(input("Ingrese otro numero: "))
 
 if (num1 > num2):
@@ -7,7 +7,7 @@ if (num1 > num2):
     print(f"La resta es {num1-num2}")
 else:
     print(f"El producto es {num1*num2}")
-    print(f"La division es {num1/num2}") """
+    print(f"La division es {num1/num2}")
 
 
 """ nota1 = int(input("Nota 1:"))
