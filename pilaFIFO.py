@@ -14,6 +14,7 @@ class Queue:
             elem = self.queue[-1]
             del self.queue[-1]
             return elem
+
         else:
             raise QueueError
 
